@@ -1,0 +1,70 @@
+/* Accordian.css */
+
+.wrapper {
+    max-width: 600px;
+    margin: 50px auto;
+    font-family: 'Arial, sans-serif';
+  }
+  
+  .accordian {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .item {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .item:last-child {
+    border-bottom: none;
+  }
+  
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .title:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .title h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .title span {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  .title span {
+    font-size: 24px;
+    transform: rotate(0deg);
+  }
+  
+  .item.selected .title span {
+    transform: rotate(45deg); /* Rotates the + symbol to be a - when selected */
+  }
+  
+  .content {
+    padding: 15px;
+    background-color: #fff;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

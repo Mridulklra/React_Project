@@ -1,0 +1,84 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 90vw; /* Ensures the container does not exceed 90% of the viewport width */
+    max-height: 80vh; /* Ensures the container does not exceed 80% of the viewport height */
+    margin: auto;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .arrow-left {
+    left: 10px;
+  }
+  
+  .arrow-right {
+    right: 10px;
+  }
+  
+  .current-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .ksk {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+  }
+  
+  .curre {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .curre.active {
+    background-color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      max-width: 100vw; /* Full width on small screens */
+      max-height: 70vh; /* Slightly smaller height on small screens */
+    }
+    
+    .arrow {
+      font-size: 1.5rem; /* Smaller arrows on small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      max-height: 60vh; /* Smaller height on very small screens */
+    }
+  
+    .arrow {
+      font-size: 1.2rem; /* Even smaller arrows on very small screens */
+    }
+  }
+  
